@@ -58,12 +58,43 @@ exports.getOneVerse = async (req, res) => {
 
     if (oneVerse === null) {
       return res
-        .status(400)
+        .status(404)
         .json({ error: "Can't find verse with given number. 😟" });
     }
     res.status(200).json(oneVerse);
   } catch (error) {
     res.status(404).json({ message: error.message });
+    console.log(error);
+  }
+};
+
+exports.getDailyVerse = async (req, res) => {
+  const prev = req.query.prev;
+
+  try {
+    if (prev == undefined || prev == 0) {
+      const verse = await Verse.findOne({
+        id: 1,
+      });
+      if (!verse) {
+        res
+          .status(404)
+          .json({ error: "Can't find verse with given number. 😟" });
+      }
+      res.status(200).json(verse);
+    } else {
+      const verse = await Verse.findOne({
+        id: prev,
+      });
+      if (!verse) {
+        res
+          .status(404)
+          .json({ error: "Can't find verse with given number. 😟" });
+      }
+      res.status(200).json(verse);
+    }
+  } catch (error) {
+    res.status(404).json({ error: error.message });
     console.log(error);
   }
 };
