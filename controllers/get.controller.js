@@ -31,7 +31,7 @@ exports.getAllVerses = async (req, res) => {
   const { chapter } = req.params;
   try {
     const verses = await Verse.find({ chapter_number: chapter });
-    console.log(verses);
+
     if (verses === null) {
       return res
         .status(400)
@@ -42,14 +42,13 @@ exports.getAllVerses = async (req, res) => {
     res.status(500).json({
       error: error.message,
     });
-    // console.log(error);
+    console.log(error);
   }
 };
 
 exports.getOneVerse = async (req, res) => {
   const { chapter, verse } = req.query;
 
-  console.log(chapter, verse);
   try {
     const oneVerse = await Verse.findOne({
       chapter_number: chapter,
