@@ -31,13 +31,13 @@ Before you start contributing to Bhagwad Gita API, make sure you have the necess
 2. **Clone your fork:** In your terminal, use the following command to clone your forked repository:
 
    ```bash
-   git clone https://github.com/your-username/Bhagwad_Gita_API.git
+   git clone https://github.com/your-username/Bhagwad-Gita-API.git
    ```
 
 3. **Navigate to the project directory:**
 
    ```bash
-   cd Bhagwad_Gita_API
+   cd Bhagwad-Gita-API
    ```
 
 4. **Install dependencies:**
