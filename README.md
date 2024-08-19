@@ -56,8 +56,8 @@ We welcome and appreciate contributions from the community! Here's how you can c
 
 Have questions or feedback? Reach out to us:
 
-- GitHub: [@PriyanshuVerma-Dev](https://github.com/priyanshuverma-dev)
-- Email: priyanshu.creator@hotmail.com
+- GitHub: [Priyanshu Verma](https://github.com/priyanshuverma-dev)
+- Email: priyanshuverma@outlook.in
 
 ## License
 
